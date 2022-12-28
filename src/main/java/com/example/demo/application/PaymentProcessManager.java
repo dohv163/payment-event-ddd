@@ -1,5 +1,5 @@
 package com.example.demo.application;
 
-public interface IPaymentProcessManager {
+public interface PaymentProcessManager {
 
 }
