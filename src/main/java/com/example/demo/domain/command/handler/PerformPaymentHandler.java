@@ -16,18 +16,21 @@ import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
-public class PerformPaymentHandler implements CommandHandler<PerformPayment, PaymentRequested, PaymentId> {
+public class PerformPaymentHandler implements
+    CommandHandler<PerformPayment, PaymentRequested, PaymentId> {
 
   private final PaymentEventRepository paymentEventRepository;
   private final PerformPaymentValidator performPaymentValidator;
 
-  PerformPaymentHandler(PaymentEventRepository paymentEventRepository,PerformPaymentValidator performPaymentValidator) {
+  PerformPaymentHandler(PaymentEventRepository paymentEventRepository,
+      PerformPaymentValidator performPaymentValidator) {
     this.paymentEventRepository = paymentEventRepository;
     this.performPaymentValidator = performPaymentValidator;
   }
 
   @Override
-  public CompletionStage<Either<CommandFailure, PaymentRequested>> handle(PerformPayment command, PaymentId entityId) {
+  public CompletionStage<Either<CommandFailure, PaymentRequested>> handle(PerformPayment command,
+      PaymentId entityId) {
 
     log.info("Handle command {}", command);
 

@@ -11,6 +11,7 @@ public class PerformPaymentValidator implements CommandValidation<PerformPayment
 
   @Override
   public Either<CommandFailure, PerformPayment> acceptOrReject(PerformPayment command) {
+    // handle something
     return Either.right(command);
   }
 }
