@@ -2,14 +2,14 @@ package com.example.demo.domain.vo;
 
 public enum PaymentIntent {
 
-  AUTHORIZE, CAPTURE;
+  CREATED, CONFIRMED;
 
-  public boolean isAuthorize() {
-    return AUTHORIZE.equals(this);
+  public boolean isCreated() {
+    return CREATED.equals(this);
   }
 
-  public boolean isCapture() {
-    return CAPTURE.equals(this);
+  public boolean isConfirmed() {
+    return CONFIRMED.equals(this);
   }
 
 }

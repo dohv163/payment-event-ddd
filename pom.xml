@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.0.1</version>
+    <version>2.3.5.RELEASE</version>
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.example</groupId>
@@ -15,6 +15,7 @@
   <name>demo</name>
   <description>Demo project for Spring Boot</description>
   <properties>
+    <mssql.version>7.4.1.jre8</mssql.version>
     <java.version>17</java.version>
   </properties>
   <dependencies>
@@ -45,27 +46,22 @@
       <version>1.18.24</version>
     </dependency>
     <dependency>
-      <groupId>org.hibernate.orm</groupId>
-      <artifactId>hibernate-core</artifactId>
-    </dependency>
-    <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-data-jpa</artifactId>
+      <groupId>com.microsoft.sqlserver</groupId>
+      <artifactId>mssql-jdbc</artifactId>
+      <version>${mssql.version}</version>
     </dependency>
     <dependency>
-      <groupId>mysql</groupId>
-      <artifactId>mysql-connector-java</artifactId>
-      <version>5.1.46</version>
+      <groupId>javax.persistence</groupId>
+      <artifactId>javax.persistence-api</artifactId>
+      <version>2.2</version>
     </dependency>
 
-    <!--    <dependency>-->
-<!--      <groupId>org.hibernate.javax.persistence</groupId>-->
-<!--      <artifactId>hibernate-jpa-2.1-api</artifactId>-->
-<!--    </dependency>-->
+
+
 
   </dependencies>
 
